@@ -1,0 +1,8 @@
+{
+  "info": {
+    "name": "Levels",
+    "description": "Levels is a continuous glucose monitoring (CGM) metabolic-health app. As of this catalog date Levels does NOT publish a documented public or partner developer API, so this collection contains no executable requests. Member data export is a manual CSV download from the member portal UI; inbound integrations (Apple Health, wearables, document upload) are in-app only. This collection exists to anchor the APIs.json catalog entry and will be populated if Levels publishes a real API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": []
+}

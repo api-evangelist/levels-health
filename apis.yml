@@ -1,0 +1,87 @@
+aid: levels-health
+url: https://raw.githubusercontent.com/api-evangelist/levels-health/refs/heads/main/apis.yml
+name: Levels
+kind: company
+description: Levels is a continuous glucose monitoring (CGM) metabolic-health app that
+  pairs glucose sensors with lab testing and personalized guidance. The platform is
+  a consumer product delivered through iOS, Android, and a member web portal; it
+  consumes health data (Apple Health, wearables, uploaded labs) but does not publish
+  a documented public or partner developer API as of this catalog date.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Metabolic Health
+- CGM
+- Continuous Glucose Monitoring
+- Health
+- Wellness
+created: '2026-06-20'
+modified: '2026-06-20'
+specificationVersion: '0.19'
+apis:
+- aid: levels-health:levels-data-export
+  name: Levels Data Export
+  tags:
+  - Data Export
+  - Glucose
+  - CSV
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://support.levels.com/article/105-how-to-export-your-data
+  baseURL: ''
+  properties:
+  - url: https://support.levels.com/article/105-how-to-export-your-data
+    type: Documentation
+  - url: openapi/levels-health-openapi.yml
+    type: OpenAPI
+  description: Member-facing data export of glucose/CGM, activity, zones, and nutrition
+    logs as CSV downloads from the Levels member portal. This is a UI download only;
+    no programmatic/public API endpoint is documented for export.
+- aid: levels-health:levels-health-data-integrations
+  name: Levels Health Data Integrations
+  tags:
+  - Integrations
+  - Apple Health
+  - Wearables
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.levelshealth.com
+  baseURL: ''
+  properties:
+  - url: https://www.levelshealth.com
+    type: Documentation
+  - url: openapi/levels-health-openapi.yml
+    type: OpenAPI
+  description: Inbound connectivity that lets members link Apple Health and wearable
+    data and upload prior labs, DEXA scans, and health records into the Levels app.
+    These are in-app integrations, not an outbound public API surface.
+- aid: levels-health:levels-partner-program
+  name: Levels Partner Program
+  tags:
+  - Partners
+  - Clinics
+  - B2B
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.levelshealth.com
+  baseURL: ''
+  properties:
+  - url: https://www.levelshealth.com
+    type: Documentation
+  - url: openapi/levels-health-openapi.yml
+    type: OpenAPI
+  description: A "Partner With Us" program for clinics and partners surfaced in the
+    Levels site footer. No partner-facing developer API, OAuth flow, or documented
+    endpoints are published; engagement is via a contact/inquiry form.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/levels-health
+- type: Website
+  url: https://www.levelshealth.com
+- type: Documentation
+  url: https://support.levels.com
+- type: Plans
+  url: plans/levels-health-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/levels-health-rate-limits.yml
+- type: FinOps
+  url: finops/levels-health-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,78 @@
+aid: levels-health
+name: Levels
+review:
+  question: Does Levels expose a documented public or partner developer API (REST, GraphQL, or WebSocket)?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Levels publishes no documented event,
+    streaming, SSE, or WebSocket surface. The product is a consumer mobile/web
+    app with manual CSV data export; there is no real-time or programmatic
+    transport to model.
+findings:
+  summary: |
+    Levels (levelshealth.com / levels.com) is a continuous glucose monitoring
+    (CGM) metabolic-health subscription app. As of the review date it does NOT
+    publish a public developer API or a documented partner API. The platform is
+    consumer-facing (iOS, Android, member web portal). It acts as a data
+    consumer - members connect Apple Health and wearable data and upload prior
+    labs, DEXA scans, and health records into the app. Members can export their
+    own glucose/CGM, activity, zones, and nutrition data, but only as CSV
+    downloads from the member portal UI; there is no documented programmatic
+    export endpoint, authentication scheme, or base URL. The mobile app is known
+    to use GraphQL internally, but that interface is private and undocumented. A
+    "Partner With Us" clinic/partner program exists in the site footer but is a
+    sales/inquiry path with no published API, OAuth flow, or endpoints.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No documented public REST API or base URL is published by Levels.
+    - protocol: GraphQL
+      scheme: https
+      documented: false
+      note: The Levels app reportedly uses GraphQL internally; it is private and not documented for third-party developers.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket or streaming endpoint is documented.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events surface is documented.
+  endpointsConfirmedRest: []
+  dataAccess:
+    - method: CSV Export (member portal UI)
+      programmatic: false
+      note: Glucose/CGM, activity, zones, and nutrition logs exported manually as CSV from Health Data > Glucose Dashboard > Export Data.
+    - method: Inbound Integrations (Apple Health, wearables, document upload)
+      programmatic: false
+      note: Members link Apple Health and wearable data and upload labs/DEXA/records into the app; inbound only, no outbound API.
+sources:
+  - url: https://www.levelshealth.com
+    type: Website
+    note: Marketing site; lists membership tiers and "Connect Apple Health and wearable data" / "Upload prior labs, DEXA scans" features. No developer/API section.
+  - url: https://support.levels.com/article/105-how-to-export-your-data
+    type: Documentation
+    note: Data export is a manual CSV download from the member portal; no programmatic API mentioned.
+  - url: https://support.levels.com/article/720-levels-pricing-and-plans
+    type: Documentation
+    note: Consumer membership pricing and plans; no API pricing.
+  - url: https://www.linkedin.com/company/levels-health
+    type: LinkedIn
+    note: Company profile; consumer CGM metabolic-health product, no developer API offering.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public or partner API surface exists, so no OpenAPI paths, AsyncAPI
+    document, or reconciled rate-limit/FinOps API meters were authored. The
+    catalog entry (apis.yml, README, plans, rate-limits, finops, this review)
+    documents the absence honestly: membership pricing is reconciled true;
+    rate-limits and FinOps API surfaces are reconciled false with notes; the
+    OpenAPI declares no paths.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

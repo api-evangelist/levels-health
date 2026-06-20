@@ -1,0 +1,146 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Levels
+providerId: levels-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: true
+tags:
+- Metabolic Health
+- CGM
+- Continuous Glucose Monitoring
+- Health
+- Wellness
+- Plans
+description: >-
+  Levels is sold as a consumer metabolic-health membership, not as a metered
+  API product. Memberships are tiered subscriptions billed monthly or annually
+  and bundle the Levels app, continuous glucose monitoring (CGM) sensors, and -
+  on higher tiers - lab panels and nutritionist consultations. All plans are
+  HSA/FSA eligible. There is no developer/API pricing because Levels does not
+  publish a public or partner developer API.
+notes: >-
+  Pricing reflects publicly listed membership tiers from the Levels site as of
+  the catalog date and is subject to change; verify current tiers and inclusions
+  on levelshealth.com / levels.com. Plan names and inclusions vary across the
+  marketing site and support pages (e.g. an entry "Build your system" tier and
+  a "Classic" tier have both appeared); the support pricing page is the
+  authoritative source at reconciliation time. These are consumer subscription
+  prices, not API consumption rates.
+sources:
+- https://www.levelshealth.com
+- https://support.levels.com/article/720-levels-pricing-and-plans
+plans:
+- id: levels-core
+  name: Core
+  type: subscription
+  description: >-
+    Membership including the Levels app, CGM sensors, and Essential lab panels
+    with 28+ markers.
+  entries:
+  - label: Core Membership (annual)
+    name: core_annual
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: $499 per year
+    userMultiplied: false
+  - label: Core Membership (monthly)
+    name: core_monthly
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $41 per month
+    userMultiplied: false
+  elements:
+  - name: Levels App
+  - name: CGM Sensors
+  - name: Essential Lab Panels (28+ markers)
+  - name: Data Export (CSV)
+  - name: Apple Health and Wearable Integrations
+- id: levels-complete
+  name: Complete
+  type: subscription
+  description: >-
+    Top membership including Comprehensive labs with 100+ markers, a nutritionist
+    consultation, concierge service, and additional CGM sensor allocation.
+  entries:
+  - label: Complete Membership (annual)
+    name: complete_annual
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: $1,999 per year
+    userMultiplied: false
+  - label: Complete Membership (monthly)
+    name: complete_monthly
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $167 per month
+    userMultiplied: false
+  elements:
+  - name: Levels App
+  - name: CGM Sensors
+  - name: Comprehensive Labs (100+ markers)
+  - name: Nutritionist Consultation
+  - name: Concierge Service
+- id: levels-entry
+  name: Entry / Classic
+  type: subscription
+  description: >-
+    Lower-cost CGM-focused membership (listed variously as a "Build your system"
+    or "Classic" tier across Levels surfaces) providing the app and CGM without
+    the higher-tier lab panels.
+  entries:
+  - label: Entry Membership (annual)
+    name: entry_annual
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: ~$80-$288 per year (see provider; tier naming varies)
+    userMultiplied: false
+  elements:
+  - name: Levels App
+  - name: CGM Sensors
+  - name: Data Export (CSV)
+- id: levels-partner
+  name: Partner / Clinic
+  type: enterprise
+  description: >-
+    "Partner With Us" clinic/partner program surfaced in the Levels footer.
+    Pricing and packaging are negotiated; no public partner API or rate card is
+    published.
+  entries:
+  - label: Partner Program
+    name: partner
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact Levels
+    userMultiplied: false
+  elements:
+  - name: Clinic Programs
+  - name: Custom Packaging
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

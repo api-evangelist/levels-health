@@ -1,0 +1,53 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Levels
+providerId: levels-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Metabolic Health
+- CGM
+- Continuous Glucose Monitoring
+- Health
+- Wellness
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Levels does not publish a public or partner developer API, so no API rate
+  limits, quotas, or throttling policies are documented. Member data export is
+  a manual CSV download from the member portal UI and is not governed by a
+  published programmatic rate limit. This artifact records the absence of a
+  documented rate-limit surface rather than specific values.
+notes: >-
+  No rate-limit values are reconciled because no public API exists. If Levels
+  ever publishes a developer or partner API, capture per-endpoint RPS/RPM/daily
+  quotas and 429 throttling behavior here at reconciliation.
+sources:
+- https://www.levelshealth.com
+- https://support.levels.com/article/105-how-to-export-your-data
+responseCodes:
+  throttled: 429
+limits:
+- name: Public API Rate Limit
+  scope: account
+  metric: requests
+  limit: not applicable - no public API documented
+  notes: Levels exposes no documented programmatic API; no published rate limits.
+- name: Data Export
+  scope: account
+  metric: exports
+  limit: see provider documentation
+  notes: >-
+    CSV export is a manual member-portal action; no published programmatic
+    quota or throttle is documented.
+policies:
+- name: No Documented API Policy
+  description: >-
+    No developer API terms, throttling, or backoff guidance are published
+    because Levels does not offer a public or partner API.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

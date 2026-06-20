@@ -1,0 +1,87 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Levels
+providerId: levels-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Metabolic Health
+- CGM
+- Continuous Glucose Monitoring
+- Health
+- Wellness
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Levels spend. Levels is a consumer metabolic-health
+  subscription, not a usage-metered API product, so there is no API
+  consumption billing to manage. Cost is a flat monthly or annual membership
+  fee (HSA/FSA eligible) bundling the app, CGM sensors, and - on higher tiers -
+  lab panels and consultations. No developer/API meters exist because Levels
+  publishes no public or partner API.
+notes: >-
+  This artifact is not reconciled against any usage-based billing because none
+  exists. Membership prices are subject to change; verify on levelshealth.com /
+  the Levels support pricing page. If a developer/partner API with metered
+  billing is later introduced, replace the subscription model below with FOCUS
+  usage meters.
+sources:
+- https://www.levelshealth.com
+- https://support.levels.com/article/720-levels-pricing-and-plans
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Levels
+serviceCategory: Health and Wellness
+billingModel:
+  pricingCategory: Subscription-Based
+  billingFrequency: Monthly or Annual
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+focusColumns:
+  ServiceName: Levels Membership
+  ServiceCategory: Health and Wellness
+  ProviderName: Levels
+  PublisherName: Levels
+  InvoiceIssuerName: Levels
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Subscription-Based
+meters:
+- name: membership_subscription
+  description: >-
+    Flat consumer membership fee billed monthly or annually per member. Not a
+    usage meter; the membership bundles app access and CGM sensors.
+  unit: subscriptions
+  aggregation: sum
+  dimensions:
+  - account
+  - plan
+principles:
+- name: Visibility
+  description: >-
+    Track membership tier and renewal date; there is no per-call API spend to
+    inspect because no API exists.
+- name: Allocation
+  description: >-
+    Map the membership to the individual member (or HSA/FSA account) it belongs
+    to; no per-workload API tagging applies.
+- name: Optimization
+  description: >-
+    Choose the membership tier matching needed lab and consultation inclusions;
+    pay annually to reduce effective monthly cost; use HSA/FSA eligibility.
+- name: Accountability
+  description: >-
+    Review membership value against usage at renewal; no API cost center
+    applies.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
