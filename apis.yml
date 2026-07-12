@@ -70,6 +70,8 @@ apis:
     Levels site footer. No partner-facing developer API, OAuth flow, or documented
     endpoints are published; engagement is via a contact/inquiry form.
 common:
+- type: DomainSecurity
+  url: security/levels-health-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/levels-health
 - type: Website
@@ -82,6 +84,8 @@ common:
   url: rate-limits/levels-health-rate-limits.yml
 - type: FinOps
   url: finops/levels-health-finops.yml
+- type: Blog
+  url: https://www.levelshealth.com/rss/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
