@@ -1,0 +1,13 @@
+{
+  "repo": "levels-health",
+  "feeds": [
+    {
+      "source": "https://www.levelshealth.com/rss/",
+      "feed_url": "https://www.levelshealth.com/rss/",
+      "title": "Levels",
+      "saved": 0
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 10
+}
