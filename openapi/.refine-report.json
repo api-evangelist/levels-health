@@ -1,0 +1,14 @@
+{
+  "provider": "levels-health",
+  "sources": [
+    "levels-health-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived levels-health-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

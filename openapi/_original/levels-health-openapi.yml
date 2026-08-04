@@ -1,0 +1,28 @@
+openapi: 3.0.1
+info:
+  title: Levels API
+  description: >-
+    Levels is a continuous glucose monitoring (CGM) metabolic-health app. As of
+    this catalog date Levels does NOT publish a documented public or partner
+    developer API. The platform is a consumer product (iOS, Android, member web
+    portal) that consumes health data (Apple Health, wearables, uploaded labs)
+    and lets members export their own glucose, activity, zones, and nutrition
+    data as CSV downloads from the member portal UI. No programmatic REST
+    endpoints, authentication scheme, or partner API are documented, so this
+    specification intentionally declares no paths. It exists to anchor the
+    APIs.json catalog entry and will be populated only if Levels publishes a
+    real developer API.
+  termsOfService: https://www.levelshealth.com/terms
+  contact:
+    name: Levels Support
+    email: support@levels.com
+    url: https://support.levels.com
+  version: '0.0'
+servers:
+  - url: https://www.levelshealth.com
+    description: >-
+      Placeholder marketing/member-portal origin. No documented API base URL
+      exists for Levels; this is not an API endpoint.
+paths: {}
+components:
+  schemas: {}
