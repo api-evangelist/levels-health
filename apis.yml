@@ -50,6 +50,10 @@ apis:
 - aid: levels-health:levels-health-data-integrations
   name: Levels Health Data Integrations
   tags:
+  - Integration
+  - Apple Health
+  - Wearables
+  tags_raw:
   - Integrations
   - Apple Health
   - Wearables
