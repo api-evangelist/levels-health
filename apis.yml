@@ -7,6 +7,17 @@ description: Levels is a continuous glucose monitoring (CGM) metabolic-health ap
   a consumer product delivered through iOS, Android, and a member web portal; it
   consumes health data (Apple Health, wearables, uploaded labs) but does not publish
   a documented public or partner developer API as of this catalog date.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
