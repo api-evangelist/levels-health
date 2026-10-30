@@ -1,4 +1,4 @@
-# Levels (levels-health)
+# Levels
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,92 +66,109 @@
 
 Levels is a continuous glucose monitoring (CGM) metabolic-health app that pairs glucose sensors with lab testing and personalized guidance. The platform is a consumer product delivered through iOS, Android, and a member web portal; it consumes health data (Apple Health, wearables, uploaded labs) but does not publish a documented public or partner developer API as of this catalog date.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/levels-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/levels-health/refs/heads/main/apis.yml)
+**Areas:** Metabolic Health · CGM · Continuous Glucose Monitoring · Health · Wellness
 
-> Note: This catalog entry documents a provider with **no public developer API**. The "APIs" listed below describe member-facing data export, in-app data integrations, and a clinic/partner program — none of which expose documented programmatic endpoints. They are captured here for completeness; OpenAPI, plans, rate-limit, and FinOps artifacts are marked `reconciled: false` where the underlying surface is not publicly documented.
+## Levels on APIs.io
 
-## Tags
+Everything profiled for Levels is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/levels-health/](https://apis.io/providers/levels-health/)** — or go straight to one of the APIs or properties below.
 
-- Metabolic Health
-- CGM
-- Continuous Glucose Monitoring
-- Health
-- Wellness
+### APIs (3)
 
-## Timestamps
+- [Levels Data Export](https://apis.io/apis/levels-health/levels-data-export/) — Member-facing data export of glucose/CGM, activity, zones, and nutrition logs as CSV downloads from the Levels member portal. This is a UI download only; no…
+- [Levels Health Data Integrations](https://apis.io/apis/levels-health/levels-health-data-integrations/) — Inbound connectivity that lets members link Apple Health and wearable data and upload prior labs, DEXA scans, and health records into the Levels app. These…
+- [Levels Partner Program](https://apis.io/apis/levels-health/levels-partner-program/) — A "Partner With Us" program for clinics and partners surfaced in the Levels site footer. No partner-facing developer API, OAuth flow, or documented…
 
-- **Created:** 2026-06-20
-- **Modified:** 2026-06-20
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Levels Data Export
+#### Collections (1)
 
-Member-facing data export of glucose/CGM, activity, zones, and nutrition logs as CSV downloads from the Levels member portal. This is a UI download only; no programmatic/public API endpoint is documented for export.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://support.levels.com/article/105-how-to-export-your-data](https://support.levels.com/article/105-how-to-export-your-data)
+- [Levels](https://apis.io/collections/levels-health/open-levels-health/)
 
-#### Tags
+#### Security (1)
 
-- Data Export
-- Glucose
-- CSV
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Levels Health Domain Security](https://apis.io/security/levels-health/levels-health-domain-security/)
 
-- [Documentation](https://support.levels.com/article/105-how-to-export-your-data)
-- [OpenAPI](openapi/levels-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/levels-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/levels-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Levels Health Data Integrations
+Published plans, tiers and prices.
 
-Inbound connectivity that lets members link Apple Health and wearable data and upload prior labs, DEXA scans, and health records into the Levels app. These are in-app integrations, not an outbound public API surface.
+- [Levels Health Plans Pricing](https://apis.io/plans/levels-health/levels-health-plans-pricing/)
 
-- **Human URL:** [https://www.levelshealth.com](https://www.levelshealth.com)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Integrations
-- Apple Health
-- Wearables
+- [Levels Health Rate Limits](https://apis.io/rate-limits/levels-health/levels-health-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://www.levelshealth.com)
-- [OpenAPI](openapi/levels-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/levels-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/levels-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Levels Partner Program
+- [Levels Health Finops](https://apis.io/finops/levels-health/levels-health-finops/)
 
-A "Partner With Us" program for clinics and partners surfaced in the Levels site footer. No partner-facing developer API, OAuth flow, or documented endpoints are published; engagement is via a contact/inquiry form.
+## Where to find this API
 
-- **Human URL:** [https://www.levelshealth.com](https://www.levelshealth.com)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Partners
-- Clinics
-- B2B
-
-#### Properties
-
-- [Documentation](https://www.levelshealth.com)
-- [OpenAPI](openapi/levels-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/levels-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/levels-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/levels-health)
 - [Website](https://www.levelshealth.com)
 - [Documentation](https://support.levels.com)
-- [Plans](plans/levels-health-plans-pricing.yml)
-- [Rate Limits](rate-limits/levels-health-rate-limits.yml)
-- [Fin Ops](finops/levels-health-finops.yml)
+- [Blog](https://www.levelshealth.com/rss/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 16.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 25.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/levels-health/](https://apis.io/providers/levels-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Levels: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/levels-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
